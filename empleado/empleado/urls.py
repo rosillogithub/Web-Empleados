@@ -19,9 +19,7 @@ from django.urls import path, include
 from applications.home.views import IndexView, TemplateView
 
 urlpatterns = [
-    #path('', IndexView.as_view(), name='root'),   # <-- para que / también funcione
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name="index.html"), name='root'),
-    # path('home/', IndexView.as_view()),   
     path('',include('applications.home.urls')),
 ]

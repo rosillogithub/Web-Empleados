@@ -1,0 +1,9 @@
+<h1>Listando elementos de una Base de Datos</h1>
+
+{{ lista_prueba }}
+
+<ul>
+    {% for pruebita in lista_prueba %}
+        <li>{{ pruebita.titulo }} - {{ pruebita.subtitulo }}</li>
+    {%endfor %}
+</ul>
